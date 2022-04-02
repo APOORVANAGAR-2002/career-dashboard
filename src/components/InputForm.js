@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Col, Container, DropdownButton, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, DropdownButton, Form, FormControl, InputGroup, Row } from "react-bootstrap";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import { BsTypeBold } from "react-icons/bs";
 import { BsTypeItalic } from "react-icons/bs";
@@ -8,21 +8,21 @@ import { BsListOl } from "react-icons/bs";
 
 function InputForm() {
     return (
-        // #C4C4C4
         <Container fluid className="py-5" style={{ background: '#E5E5E5' }}>
             <h1>Career Dashboard</h1>
             <Container>
-                <Row className="py-2">
-                    <Col xs={12} sm={6} md={8}>
-                        <Form>
-                            <Form.Group>
-                                <Form.Control type="text" size="lg" placeholder="Title" style={{ background: '#C4C4C4', borderRadius: '0.5rem' }} />
-                            </Form.Group>
-                        </Form>
+                <Row className="my-2">
+                    <Col md={7} className='border border-1 d-flex justify-content-center' >
+                        <InputGroup >
+                            <FormControl style={{ background: '#c4c4c4', borderRadius: '0.7rem' }}
+                                placeholder="Title"
+                                aria-label="Title"
+                            />
+                        </InputGroup>
                     </Col>
-                    <Col xs={12} sm={6} md={4} className='d-grid' style={{ background: '#c4c4c4', borderRadius: '0.5rem' }}>
-                        <ButtonGroup>
-                            <DropdownButton variant="transparent" className="d-grid" menuVariant="dark" title="Employment type (Option Choose)">
+                    <Col md={5} className='d-flex justify-content-center'>
+                        <div style={{ width: '100%', background: '#c4c4c4', borderRadius: '0.8rem' }}>
+                            <DropdownButton className="border border-2" variant="transparent" menuVariant="dark" title="Employment Type(Option Choose)">
                                 <DropdownItem href="#">Part-time</DropdownItem>
                                 <DropdownItem href="#">Contract</DropdownItem>
                                 <DropdownItem href="#">Full-time</DropdownItem>
@@ -30,21 +30,22 @@ function InputForm() {
                                 <DropdownItem href="#">Vounteer</DropdownItem>
                                 <DropdownItem href="#">Internship</DropdownItem>
                             </DropdownButton>
-                        </ButtonGroup>
+                        </div>
                     </Col>
                 </Row>
 
-                <Row>
-                    <Col sm={6} lg={3}>
-                        <Form>
-                            <Form.Group>
-                                <Form.Control type="input" size="lg" placeholder="Location" style={{ background: '#c4c4c4' }} />
-                            </Form.Group>
-                        </Form>
+                <Row className="my-2">
+                    <Col md={3} className='border border-1 d-flex justify-content-center'>
+                        <InputGroup >
+                            <FormControl style={{ background: '#c4c4c4', borderRadius: '0.7rem' }}
+                                placeholder="Location"
+                                aria-label="Location"
+                            />
+                        </InputGroup>
                     </Col>
-                    <Col sm={6} lg={3} className="d-grid" style={{ background: '#c4c4c4', borderRadius: '0.5rem' }}>
-                        <ButtonGroup>
-                            <DropdownButton variant="transparent" className="d-grid" title="Job section(Option Choose)">
+                    <Col md={3} className='d-flex justify-content-center'>
+                        <div style={{ width: '100%', background: '#c4c4c4', borderRadius: '0.8rem' }}>
+                            <DropdownButton className="border border-2" variant="transparent" menuVariant="dark" title="Job section">
                                 <DropdownItem href="#">Business Systems</DropdownItem>
                                 <DropdownItem href="#">Design</DropdownItem>
                                 <DropdownItem href="#">Engineering</DropdownItem>
@@ -58,12 +59,11 @@ function InputForm() {
                                 <DropdownItem href="#">Security</DropdownItem>
                                 <DropdownItem href="#">Support</DropdownItem>
                             </DropdownButton>
-
-                        </ButtonGroup>
+                        </div>
                     </Col>
-                    <Col sm={6} lg={3} className="d-grid" style={{ background: '#c4c4c4', borderRadius: '0.5rem' }}>
-                        <ButtonGroup>
-                            <DropdownButton variant="transparent" className="d-grid" title="Workspace type(Option Choose)">
+                    <Col md={3} className='d-flex justify-content-center'>
+                        <div style={{ width: '100%', background: '#c4c4c4', borderRadius: '0.8rem' }}>
+                            <DropdownButton className="border border-2" variant="transparent" menuVariant="dark" title="Workplace Type">
                                 <DropdownItem href="#">
                                     <b>On-site</b>
                                     <p>Employees come to work in-person</p>
@@ -77,24 +77,27 @@ function InputForm() {
                                     <p>Employees work off-site</p>
                                 </DropdownItem>
                             </DropdownButton>
-                        </ButtonGroup>
+                        </div>
                     </Col>
-                    <Col sm={6} lg={3} className='d-grid'>
-                        <Form>
-                            <Form.Group>
-                                <Form.Control type="input" size="lg" placeholder="Paid / Gratis (Option Choose)" style={{ background: '#C4C4C4' }} />
-                            </Form.Group>
-                        </Form>
+                    <Col md={3} className='border border-1 d-flex justify-content-center'>
+                        <InputGroup >
+                            <FormControl style={{ background: '#c4c4c4', borderRadius: '0.7rem' }}
+                                placeholder="Paid/Gratis(Option Choose)"
+                                aria-label="paid"
+                            />
+                        </InputGroup>
                     </Col>
                 </Row>
 
                 <Row>
-                    <Col md={12} className='p-2'>
-                        <Form>
-                            <Form.Group>
-                                <Form.Control as="textarea" size="lg" placeholder="Short description (150 words)" style={{ background: '#C4C4C4' }} />
-                            </Form.Group>
-                        </Form>
+                    <Col xs={12} className='p-2'>
+                        <InputGroup >
+                            <FormControl style={{ background: '#c4c4c4', borderRadius: '0.7rem' }}
+                                as="textarea"
+                                placeholder="Short description (150 words)"
+                                aria-label="paid"
+                            />
+                        </InputGroup>
                     </Col>
                 </Row>
             </Container>
