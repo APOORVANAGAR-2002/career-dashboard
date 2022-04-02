@@ -8,6 +8,7 @@ export default function NavTop() {
         <Navbar.Brand href="#">
           <img src={logo}
             width='120'
+            alt="company-logo"
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
